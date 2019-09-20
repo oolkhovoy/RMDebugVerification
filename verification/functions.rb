@@ -7,6 +7,10 @@ def print_hello
   puts(say_hello("Joan"))
 end
 
+def say(e)
+  puts e
+end
+
 def dog_fun(animal = "dog".capitalize)
   animal
 end
@@ -24,3 +28,6 @@ print_hello #bp here and F7, should go through functions call
 
 # Smart Step Into call with pre-defined parameters
 fun_caller(dog_fun, cat_fun("kIttY".downcase)) #bp here and Shift + F7, should give a choice in which function to go
+
+# Should go inside say function
+[1, 2, 3].each(&method(:say))
